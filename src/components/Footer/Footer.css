@@ -1,0 +1,16 @@
+:root{
+    --footer-grey-tone: #BDBDBD;
+}
+
+.Footer{
+    flex: inline-block;
+    width: 50px;
+    background-color: var(--footer-grey-tone);
+    position: relative;
+    bottom: 0px;
+}
+
+span{
+    color: black;
+    font-size: medium;
+}
