@@ -36,3 +36,8 @@ input[type = 'radio']{
     color: var(--clear-react-blue-tone);
     /* appearance: none; */
 }
+
+.No-Wrap{
+    appearance: none;
+}
+
