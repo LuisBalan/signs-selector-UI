@@ -1,0 +1,27 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --clear-react-blue-tone: #61DAFB;
+    --dark-react-tone: #282C34;
+}
+
+.Navbar{
+    height: 50px;
+    width: 100%;
+    background-color: var(--clear-react-blue-tone);
+    position: fixed;
+    top: 0px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h2{
+    display: inline;
+    color: var(--dark-react-tone);
+}
