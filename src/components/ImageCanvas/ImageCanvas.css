@@ -2,7 +2,7 @@
 .Image-Canvas{
     display: inline-block;
     width: 800px;
-    height: 600px;
+    height: 70%;
     background-color: white;
     border: 3px solid var(--clear-react-blue-tone);
     position: absolute;

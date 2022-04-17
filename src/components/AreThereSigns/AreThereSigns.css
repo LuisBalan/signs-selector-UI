@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+.Question-Cont{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.form-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.input-cont{
+    margin: 5px 55px;
+}
+
+p, label{
+    color: var(--clear-react-blue-tone)
+}
+
+p{
+    font-size: xx-large;
+    font-weight: bolder;
+}   
+
+label{
+    font-size: x-large;
+    margin: 0 10px;
+}
+
+input[type = 'radio']{
+    color: var(--clear-react-blue-tone);
+    /* appearance: none; */
+}
