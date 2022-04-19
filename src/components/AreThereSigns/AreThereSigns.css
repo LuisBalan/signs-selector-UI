@@ -37,7 +37,12 @@ input[type = 'radio']{
     /* appearance: none; */
 }
 
+.Wrap{
+    visibility: visible;
+
+}
+
 .No-Wrap{
-    appearance: none;
+    visibility: hidden;
 }
 

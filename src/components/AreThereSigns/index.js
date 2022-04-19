@@ -38,7 +38,7 @@ function AreThereSigns(){
                 </section>
 
             </form>
-            <p className = {answer === "no" ? "No-Wrap" : null}>
+            <p className = {answer === "no" ? "No-Wrap" : "Wrap"}>
             Wrap all the signs in the image.
             </p>
         </div>
