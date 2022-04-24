@@ -1,9 +1,7 @@
-export default function NextButton(){
+export default function ActionButton({Action, Legend}){
     return(
-        <div>
-            <button>
-                Another One
+            <button onClick={Action}>
+                {Legend}  
             </button>
-        </div>
     );
 };

@@ -1,7 +1,7 @@
 
 .Image-Canvas{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     width: 950px;
     height: 70%;

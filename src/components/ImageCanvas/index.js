@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import fetchANewPhoto from '../../services/fetchANewPhoto';
+// import ActionButton from '../NextButton';
 import './ImageCanvas.css'
 
-const LoadingMessage = () => {
+function LoadingMessage(){
     return(
         <h1 className='Loading-Message'>Image Is Loading...</h1>
     );
@@ -14,17 +15,17 @@ const LoadingMessage = () => {
 //     )
 // }
 
-const ImageToRender = (props) => {
+function ImageToRender({imageURL}){
     return(
         <img className='dogImage'
         alt=''
-        src={props.content}
+        src={imageURL}
         />
-
-    )
-}
+    );
+};
 
 function ImageCanvas(){
+
     const [isLoading, setIsLoading] = useState(true);
     const [content, setContent] = useState();
 
@@ -37,8 +38,17 @@ function ImageCanvas(){
     // }, []);
 
     useEffect(() => {
-        fetchANewPhoto(setContent, setIsLoading)
-    }, [])
+            fetchANewPhoto(setContent, setIsLoading)
+    }, []);
+
+    const changePhoto = () => {
+        fetch('https://dog.ceo/api/breeds/image/random')
+        .then(res => res.json())
+        .then(dog => {
+            setContent(dog.message);
+            setIsLoading(false);
+    });
+};
 
     // if(isLoading){
     //     return(
@@ -60,12 +70,16 @@ function ImageCanvas(){
     return(
         <div className='Image-Canvas'>
             {console.log(content)}
-            {isLoading ?
+            {isLoading === true ?
                 <LoadingMessage /> :
                 <ImageToRender
-                src = {'https://images.dog.ceo/breeds/poodle-toy/n02113624_7997.jpg'}
+                imageURL={content}
                 />
             }
+ <button onClick={changePhoto}>
+     Change Photo
+ </button>
+            
         </div>
     );
 };
