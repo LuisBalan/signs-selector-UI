@@ -7,6 +7,8 @@
 :root{
     --clear-react-blue-tone: #61DAFB;
     --dark-react-tone: #282C34;
+    --clear-react-active-tone: #0b7d9c;
+    --clear-react-hover-tone: #59abc2;
 }
 
 .Navbar{
