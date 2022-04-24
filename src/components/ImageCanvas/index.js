@@ -76,9 +76,7 @@ function ImageCanvas(){
                 imageURL={content}
                 />
             }
- {/* <button onClick={changePhoto}>
-     Change Photo
- </button> */}
+
             <ActionButton
             Action = {changePhoto}
             Legend = {"Change Photo"}
