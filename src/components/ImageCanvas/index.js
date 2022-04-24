@@ -68,6 +68,7 @@ function ImageCanvas(){
     // };
 
     return(
+
         <div className='Image-Canvas'>
             {console.log(content)}
             {isLoading === true ?
@@ -76,12 +77,11 @@ function ImageCanvas(){
                 imageURL={content}
                 />
             }
-
+            
             <ActionButton
             Action = {changePhoto}
             Legend = {"Change Photo"}
             />
-            
         </div>
     );
 };

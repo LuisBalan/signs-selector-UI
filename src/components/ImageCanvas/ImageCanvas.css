@@ -2,11 +2,12 @@
 .Image-Canvas{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
     width: 950px;
     height: 70%;
-    background-color: white;
-    border: 3px solid var(--clear-react-blue-tone);
+    background-color:var();
+    /* border: 3px solid var(--clear-react-blue-tone); */
     position: absolute;
     top: 100px;
 }
@@ -17,3 +18,7 @@
     font-size: xx-large;
 }
 
+.dogImage{
+    max-width: 900px;
+    max-height: 600px;
+}
