@@ -10,3 +10,9 @@
     position: absolute;
     top: 100px;
 }
+
+
+.Loading-Message{
+    color: var(--clear-react-blue-tone);
+    font-size: xx-large;
+}
