@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import fetchANewPhoto from '../../services/fetchANewPhoto';
-// import ActionButton from '../NextButton';
+import ActionButton from '../NextButton';
 import './ImageCanvas.css'
 
 function LoadingMessage(){
@@ -76,9 +76,13 @@ function ImageCanvas(){
                 imageURL={content}
                 />
             }
- <button onClick={changePhoto}>
+ {/* <button onClick={changePhoto}>
      Change Photo
- </button>
+ </button> */}
+            <ActionButton
+            Action = {changePhoto}
+            Legend = {"Change Photo"}
+            />
             
         </div>
     );
