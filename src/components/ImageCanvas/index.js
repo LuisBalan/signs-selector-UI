@@ -80,7 +80,7 @@ function ImageCanvas(){
             
             <ActionButton
             Action = {changePhoto}
-            Legend = {"Change Photo"}
+            Legend = {"Change Pic"}
             />
         </div>
     );
