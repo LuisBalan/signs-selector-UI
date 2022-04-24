@@ -1,6 +1,28 @@
 import { useEffect, useState } from 'react'
-import fetchANewDog from '../../services/fetchANewDog';
+import fetchANewPhoto from '../../services/fetchANewPhoto';
 import './ImageCanvas.css'
+
+const LoadingMessage = () => {
+    return(
+        <h1 className='Loading-Message'>Image Is Loading...</h1>
+    );
+};
+
+// const LoadedImage = () => {
+//     return(
+//         <h1>Image was loaded</h1>
+//     )
+// }
+
+const ImageToRender = (props) => {
+    return(
+        <img className='dogImage'
+        alt=''
+        src={props.content}
+        />
+
+    )
+}
 
 function ImageCanvas(){
     const [isLoading, setIsLoading] = useState(true);
@@ -15,25 +37,38 @@ function ImageCanvas(){
     // }, []);
 
     useEffect(() => {
-        fetchANewDog(setContent, setIsLoading)
+        fetchANewPhoto(setContent, setIsLoading)
     }, [])
 
-    if(isLoading){
-        return(
-            <div className='Loading-Canvas'>
-                <h1 className='Loading-Message'>Image Is Loading...</h1>
-            </div>
-        );
-    }else{
-        return(
-            <div className="Image-Canvas">
-                <img className='dogImage'
-                alt=''
-                src={content}
+    // if(isLoading){
+    //     return(
+    //         <div className='Loading-Canvas'>
+    //             <h1 className='Loading-Message'>Loading image...</h1>
+    //         </div>
+    //     );
+    // }else{
+    //     return(
+    //         <div className="Image-Canvas">
+    //             <img className='dogImage'
+    //             alt=''
+    //             src={content}
+    //             />
+    //         </div>
+    //     );
+    // };
+
+    return(
+        <div className='Image-Canvas'>
+            {console.log(content)}
+            {isLoading ?
+                <LoadingMessage /> :
+                <ImageToRender
+                src = {'https://images.dog.ceo/breeds/poodle-toy/n02113624_7997.jpg'}
                 />
-            </div>
-        );
-    };
+            }
+        </div>
+    );
 };
+
 
 export default ImageCanvas;

@@ -1,4 +1,4 @@
-function fetchANewDog(callback1, callback2){
+function fetchANewPhoto(callback1, callback2){
     fetch('https://dog.ceo/api/breeds/image/random')
         .then(res => res.json())
         .then(dog => {
@@ -7,4 +7,4 @@ function fetchANewDog(callback1, callback2){
         });
 };
 
-export default fetchANewDog;
+export default fetchANewPhoto;
