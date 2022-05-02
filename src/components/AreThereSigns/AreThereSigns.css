@@ -5,7 +5,14 @@
 .Question-Cont{
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 0px;
     width: 70%;
+}
+
+.Question{
+    position: relative;
+    top: 0;
 }
 
 .form-cont{

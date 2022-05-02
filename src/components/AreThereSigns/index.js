@@ -11,7 +11,7 @@ function AreThereSigns(){
     
     return(
         <div className='Question-Cont'>
-            <p>Are there signs in the image to the left?</p>
+            <p className='Question'>Are there signs in the image to the left?</p>
             <br/>
             <form className="form-cont">
                 <section className='input-cont'>
